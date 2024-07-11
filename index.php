@@ -7,24 +7,36 @@
 </head>
 <body>
     <form action="index.php" method="post">
-        <label>Ilość: </label><br>
-        <input type="text" name="ilosc">
+        <label>x:</label>
+        <input type="text" name="x">
+        <label>y:</label>
+        <input type="text" name="y">
+        <label>z:</label>
+        <input type="text" name="z">
         <input type="submit" value="total">
-
     </form>
 </body>
 </html>
 
 <?php
-$item = "pizza";
-$price = 5.99;
-$ilosc = $_POST["ilosc"];
+
+$x = $_POST["x"];
+$y = $_POST["y"];
+$z = $_POST["z"];
 $total = null;
 
-$total = $ilosc * $price;
-echo "you have order x{$ilosc} {$item}s <br>";
-echo "your total is {$total} zł";
+//$total = abs($x);
+//$total = round($x); - zaokrągl
+//$total = floor($x); - zaokrągl w dół
+//$total = ceil($x); - zaokrągl w góre
+//$total = pow($x, $y); - potęga
+//$total = sqrt($x);
+//$total = max($x,$y,$z);
+//$total = min($x,$y,$z);
+//$total = pi();
+//$total = rand(1,6);
 
 
+echo $total;
 
 ?>
