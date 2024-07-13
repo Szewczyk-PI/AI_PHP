@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $messageContent = "Zawartość wymagań oferty:\n$textContent\n\nMoje CV:\n$fileContent\n\nEdytuj moje CV tak by jak najbardziej pasowało do oferty, Dopisz coś z sensem w umiejętnościach. Musi być po polsku.";
 
             // Przygotowanie danych do API
-            $apiKey = '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';  // Podstaw swój klucz API
+            $apiKey = '';  // Podstaw swój klucz API
             $apiUrl = 'https://api.groq.com/openai/v1/chat/completions';
             $model = 'llama3-8b-8192';
             $data = [
