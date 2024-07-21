@@ -65,12 +65,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Przygotowanie danych do API
             $apiKey = '';  // Podstaw swój klucz API
             $apiUrl = 'https://api.groq.com/openai/v1/chat/completions';
-            $model = 'llama3-8b-8192';
             $data = [
                 'messages' => [
                     ['role' => 'user', 'content' => $messageContent]
                 ],
-                'model' => $model
+                'model' => 'llama3-70b-8192',
+                'temperature' => 1.5,
+                'max_tokens' => 2048,
+                'top_p' => 1.0,
+                'stream' => false,
+                'stop' => null
             ];
 
             // Konwersja danych do formatu JSON
